@@ -9,6 +9,9 @@
     <!-- Loading CSS -->
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/components/header.css">
+    <link rel="stylesheet" href="./styles/components/searchbar.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Google Material Icons -->
 </head>
 <body>
     <header>
@@ -24,7 +27,14 @@
     </header>
 
     <main>
-        
+        <form action="./index.html" class="search-form">
+            <input type="text" id="searchbar" placeholder="Pesquise um pokemon pelo nome">
+            <button>
+                <span class="material-icons">
+                    search
+                </span>
+            </button>
+        </form>
     </main>
 </body>
 </html>

@@ -5,6 +5,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: "Montserrat", sans-serif;
+	color: var(--black);
 }
 
 :root {
@@ -18,11 +19,17 @@
 
 body {
 	background-color: var(--black);
+
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 main {
 	width: 75%;
-	height: 100%;
+	flex-grow: 2;
 
 	background-color: #ddd;
 }
