@@ -1,0 +1,119 @@
+.card-container {
+    width: 100%;
+    margin-bottom: 50px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 50px;
+
+    width: 100%;
+}
+
+.card {
+    width: 400px;
+    height: 150px;
+
+    background-color: #fff;
+
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--black);
+    border-radius: 25px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    box-shadow: 8px 10px 16px #0005;
+}
+
+.card .card-detail {
+    position: relative;
+    width: 50px;
+    height: 100%;
+
+    background-color: var(--red);
+    overflow: hidden;
+}
+
+.card .card-detail::after {
+    content: "";
+
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translate(+30%, -50%);
+
+    background-color: var(--black);
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+}
+
+.card .card-content {
+    flex-grow: 1;
+    height: 100%;
+    padding: 10px;
+
+    border-style: solid;
+    border-width: 0px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-color: var(--black);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card .card-content #pokemon-id {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.card .card-content #pokemon-name {
+    font-size: 1.25rem;
+}
+
+.card .card-content .type-tag-container {
+    max-width: 200px;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.card .card-content .type-tag {
+    width: 75px;
+    height: 30px;
+    margin: 0px 10px;
+
+    background-color: var(--red);
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: var(--black);
+}
+
+.card .card-img-container {
+    width: 100px;
+    height: 100%;
+    background-color: var(--blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-img-container > img {
+    max-width: 100%;
+}

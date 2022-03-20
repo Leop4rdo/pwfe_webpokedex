@@ -1,0 +1,32 @@
+nav {
+    margin: auto;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav > button {
+    width: 40px;
+    height: 40px;
+
+    border-style: solid;
+    border-radius: 50%;
+    border-color: var(--black);
+
+    background-color: var(--red);
+
+    cursor: pointer;
+}
+
+nav > button > span {
+    color: #fff;
+}
+
+nav > button.disabled {
+    opacity: 0.5;
+}
+
+nav > #page-index {
+    font-size: 1.25rem;
+}
