@@ -85,3 +85,13 @@ header h1 {
     color: #fff;
     font-size: 2rem;
 }
+
+@media (max-width: 720px) {
+    header {
+        justify-content: center;
+    }
+
+    header::before {
+        display: none;
+    }
+}

@@ -14,27 +14,29 @@
     <link rel="stylesheet" href="./styles/components/searchbar.css">
     <link rel="stylesheet" href="./styles/components/card.css">
     <link rel="stylesheet" href="./styles/components/nav.css">
+    <link rel="stylesheet" href="./styles/components/type-tag.css">
 
     <!-- Loading JS -->
-    <script src="./js/main.js" defer></script>
+    <script src="./js/pokemonList.js" type="module" defer></script>
+    <script src="./js/nav.js" type="module" defer></script>
+    <script src="./js/getUrlParams.js" type="module" defer></script>
+    <script src="./js/searchbar.js" type="module" defer></script>
 </head>
 <body>
     <header>
         <h1>WebPokedex</h1>
 
-        <div class="header-detail"></div>
-
-        <div class="lights-container">
-            <div id="yellow-light"></div>
-            <div id="green-light"></div>
-            <div id="blue-light"></div>
+        <div class="lights-container desktop-only">
+            <div id="yellow-light" class="desktop-only"></div>
+            <div id="green-light" class="desktop-only"></div>
+            <div id="blue-light" class="desktop-only"></div>
         </div>
     </header>
 
     <main>
-        <form action="./index.html" class="search-form">
-            <input type="text" id="searchbar" placeholder="Pesquise um pokemon pelo nome">
-            <button>
+        <form class="search-form" id="search-form">
+            <input type="text" id="searchbar" placeholder="Pesquise um pokemon por nome">
+            <button id="search-btn">
                 <span class="material-icons">
                     search
                 </span>
@@ -45,9 +47,9 @@
         </div>
 
         <nav>
-            <button id="prev-page-btn" class="disabled"><span class="material-icons">navigate_before</span></button>
+            <a id="prev-page-btn" class="disabled"><span class="material-icons">navigate_before</span></a>
             <span id="page-index">1</span>
-            <button id="next-page-btn"><span class="material-icons">navigate_next</span></button>
+            <a id="next-page-btn"><span class="material-icons">navigate_next</span></a>
         </nav>
     </main>
 </body>

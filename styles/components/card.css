@@ -77,37 +77,11 @@
     font-size: 1.25rem;
 }
 
-.card .card-content .type-tag-container {
-    max-width: 200px;
-    height: 100%;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-}
-
-.card .card-content .type-tag {
-    width: 75px;
-    height: 30px;
-    margin: 0px 10px;
-
-    background-color: var(--red);
-    color: #fff;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 2px;
-    border-color: var(--black);
-}
-
 .card .card-img-container {
     width: 100px;
     height: 100%;
-    background-color: var(--blue);
+    background: linear-gradient(#9ad3ecaa, #9ad3ec88),
+        repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px);
 
     display: flex;
     justify-content: center;

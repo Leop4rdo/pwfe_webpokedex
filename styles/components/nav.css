@@ -6,9 +6,13 @@ nav {
     justify-content: center;
 }
 
-nav > button {
+nav > a {
     width: 40px;
     height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     border-style: solid;
     border-radius: 50%;
@@ -17,13 +21,15 @@ nav > button {
     background-color: var(--red);
 
     cursor: pointer;
+
+    text-decoration: none;
 }
 
-nav > button > span {
+nav > a > span {
     color: #fff;
 }
 
-nav > button.disabled {
+nav > a.disabled {
     opacity: 0.5;
 }
 

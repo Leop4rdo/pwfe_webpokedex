@@ -35,3 +35,25 @@ main {
 
     background-color: #ddd;
 }
+
+.column-flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 720px) {
+    main {
+        width: 100%;
+
+        padding: 10px 20px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+}
