@@ -1,38 +1,40 @@
 nav {
-    margin: auto;
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    justify-content: center;
+	width: 100%;
+	margin-top: 20px;
+
+	display: flex;
+	gap: 25px;
+	align-items: center;
+	justify-content: center;
 }
 
 nav > a {
-    width: 40px;
-    height: 40px;
+	width: 40px;
+	height: 40px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-    border-style: solid;
-    border-radius: 50%;
-    border-color: var(--black);
+	border-style: solid;
+	border-radius: 50%;
+	border-color: var(--black);
 
-    background-color: var(--red);
+	background-color: var(--red);
 
-    cursor: pointer;
+	cursor: pointer;
 
-    text-decoration: none;
+	text-decoration: none;
 }
 
 nav > a > span {
-    color: #fff;
+	color: #fff;
 }
 
 nav > a.disabled {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 
 nav > #page-index {
-    font-size: 1.25rem;
+	font-size: 1.25rem;
 }

@@ -1,93 +1,94 @@
 .card-container {
-    width: 100%;
-    margin-bottom: 50px;
+	width: 100%;
+	margin-bottom: 50px;
 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 
-    gap: 50px;
+	gap: 50px;
 
-    width: 100%;
+	width: 100%;
 }
 
 .card {
-    width: 400px;
-    height: 150px;
+	width: 400px;
+	height: 150px;
 
-    background-color: #fff;
+	background-color: #fff;
 
-    border-style: solid;
-    border-width: 5px;
-    border-color: var(--black);
-    border-radius: 25px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: var(--black);
+	border-radius: 25px;
 
-    display: flex;
+	display: flex;
 
-    overflow: hidden;
+	overflow: hidden;
 
-    box-shadow: 8px 10px 16px #0005;
+	box-shadow: 8px 10px 16px #0005;
 }
 
 .card .card-detail {
-    position: relative;
-    width: 50px;
-    height: 100%;
+	position: relative;
+	width: 50px;
+	height: 100%;
 
-    background-color: var(--red);
-    overflow: hidden;
+	background-color: var(--red);
+	overflow: hidden;
 }
 
 .card .card-detail::after {
-    content: "";
+	content: "";
 
-    position: absolute;
-    left: 0px;
-    top: 50%;
-    transform: translate(+30%, -50%);
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform: translate(+30%, -50%);
 
-    background-color: var(--black);
-    width: 64px;
-    height: 64px;
+	background-color: var(--black);
+	width: 64px;
+	height: 64px;
 
-    border-radius: 50%;
+	border-radius: 50%;
 }
 
 .card .card-content {
-    flex-grow: 1;
-    height: 100%;
-    padding: 10px;
+	flex-grow: 1;
+	height: 100%;
+	padding: 10px;
 
-    border-style: solid;
-    border-width: 0px;
-    border-left-width: 2px;
-    border-right-width: 2px;
-    border-color: var(--black);
+	border-style: solid;
+	border-width: 0px;
+	border-left-width: 2px;
+	border-right-width: 2px;
+	border-color: var(--black);
 
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .card .card-content #pokemon-id {
-    font-size: 0.9rem;
-    color: var(--gray);
+	font-size: 0.9rem;
+	color: var(--gray);
 }
 
-.card .card-content #pokemon-name {
-    font-size: 1.25rem;
+.card .card-content #pokemon-name a {
+	font-size: 1.25rem;
+	text-decoration: none;
 }
 
 .card .card-img-container {
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(#9ad3ecaa, #9ad3ec88),
-        repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px);
+	width: 100px;
+	height: 100%;
+	background: linear-gradient(#9ad3ecaa, #9ad3ec88),
+		repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .card .card-img-container > img {
-    max-width: 100%;
+	max-width: 100%;
 }

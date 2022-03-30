@@ -1,5 +1,7 @@
-export const getURLParam = (paramName) => {
-    const urlParams = new URLSearchParams(window.location.search);
+"use strict";
 
-    return parseInt(urlParams.get(paramName));
-}
+export const getURLParam = (paramName) => {
+	const urlParams = new URLSearchParams(window.location.search);
+
+	return urlParams.get(paramName);
+};
