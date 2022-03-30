@@ -73,3 +73,20 @@ export const getType = async (name) => {
 
 	return data;
 };
+
+/* verifica se o pokemon existe*/
+export const pokemonExists = async (name) => {
+	const endpoint = `https://pokeapi.co/api/v2/pokemon/${name}`;
+
+	const res = await fetch(endpoint);
+
+	return res.status != "404";
+};
+
+export const getPokemonWeakness = (pokemon) => {
+	return pokemon.types.map(async (pokemonType, index) => {
+		const type = await getType(pokemonType.type.name);
+
+		return type.damage_relations.double_damage_from[index];
+	});
+};

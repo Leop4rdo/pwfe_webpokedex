@@ -1,9 +1,9 @@
 "use strict";
 
 import { getURLParam } from "./getUrlParams.js";
-import { getPokemon, getPokemonHabitat, getPokemonSpecie, getType, getTypeTagsHTML } from "./pokemon.js";
+import { getPokemon, getPokemonHabitat, getPokemonSpecie, getPokemonWeakness, getTypeTagsHTML } from "./pokemon.js";
 
-const pokemonName = getURLParam("name") || name;
+const pokemonName = getURLParam("name");
 
 /**
  * Responsavel por popular a pagina de detalhes do pokemon
@@ -12,7 +12,11 @@ const renderDetails = async () => {
 	const pokemon = await getPokemon(pokemonName);
 	const pokemonSpecie = await getPokemonSpecie(pokemon.species.name);
 
-	// pegando o habitat do pokemon
+	/*
+	 * o bloco de codigo abaixo pega o habitat do pokemon atravez do atributo habitat dentro de pokemonSpecie,
+	 * as vezes esse atributo não existe então quando o atributo não existir a variavel recebe um objeto de habitat
+	 * desconhecido
+	 */
 	const pokemonHabitat = pokemonSpecie.habitat
 		? await getPokemonHabitat(pokemonSpecie.habitat.name)
 		: { name: "unknown" };
@@ -21,7 +25,7 @@ const renderDetails = async () => {
 	const pokemonTypeTags = pokemon.types.map((pokemonType) => getTypeTagsHTML(pokemonType.type.name));
 
 	// pegando as fraquesas do pokemon
-	const pokemonWeaknes = await Promise.all(getWeakness(pokemon));
+	const pokemonWeaknes = await Promise.all(getPokemonWeakness(pokemon));
 
 	// transformando as fraquesas do pokemon em html
 	const pokemonWeaknesTags = pokemonWeaknes.map((type) => getTypeTagsHTML(type.name));
@@ -36,14 +40,6 @@ const renderDetails = async () => {
 
 	document.querySelector("#types-container").innerHTML = pokemonTypeTags.join("");
 	document.querySelector("#weakness-container").innerHTML = pokemonWeaknesTags.join("");
-};
-
-const getWeakness = (pokemon) => {
-	return pokemon.types.map(async (pokemonType, index) => {
-		const type = await getType(pokemonType.type.name);
-
-		return type.damage_relations.double_damage_from[index];
-	});
 };
 
 window.addEventListener("load", renderDetails);
