@@ -46,13 +46,41 @@ header #blue-light {
 header #green-light {
 	background-image: radial-gradient(var(--green), #36b947);
 
-	box-shadow: 0px 0px 16px var(--green);
+	animation: green-light-glow 1s ease-in-out;
+	animation-delay: 0.25s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes green-light-glow {
+	0%,
+	100% {
+		box-shadow: 0px 0px 8px #74ff87e3;
+		filter: brightness(1);
+	}
+	50% {
+		box-shadow: 0px 0px 20px #a2ffae;
+		filter: brightness(1.1);
+	}
 }
 
 header #yellow-light {
 	background-image: radial-gradient(var(--yellow), #ecb50d);
 
-	box-shadow: 0px 0px 16px var(--yellow);
+	animation: yellow-light-glow 1s ease-in-out;
+	animation-delay: 0.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes yellow-light-glow {
+	0%,
+	100% {
+		box-shadow: 0px 0px 8px #f0c546e8;
+		filter: brightness(1);
+	}
+	50% {
+		box-shadow: 0px 0px 20px #ffdf80;
+		filter: brightness(1.1);
+	}
 }
 
 header #blue-light {
@@ -61,7 +89,20 @@ header #blue-light {
 
 	background-image: radial-gradient(var(--blue), #5ab0d4);
 
-	box-shadow: 0px 0px 16px var(--blue);
+	animation: blue-light-glow 1s ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes blue-light-glow {
+	0%,
+	100% {
+		box-shadow: 0px 0px 8px #6ec3e7e5;
+		filter: brightness(1);
+	}
+	50% {
+		box-shadow: 0px 0px 20px #99daf7;
+		filter: brightness(1.1);
+	}
 }
 
 /* Header Circle Detail */

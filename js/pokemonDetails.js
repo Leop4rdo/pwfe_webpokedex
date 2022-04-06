@@ -37,6 +37,7 @@ const renderDetails = async () => {
 	document.querySelector("#stat-height").textContent = `${pokemon.height / 10}m`;
 	document.querySelector("#stat-weight").textContent = `${pokemon.weight / 10}kg`;
 	document.querySelector("#stat-habitat").textContent = pokemonHabitat.name;
+	document.querySelector("#stat-base-exp").textContent = pokemon.base_experience;
 
 	document.querySelector("#types-container").innerHTML = pokemonTypeTags.join("");
 	document.querySelector("#weakness-container").innerHTML = pokemonWeaknesTags.join("");

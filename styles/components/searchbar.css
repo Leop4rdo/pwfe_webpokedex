@@ -17,6 +17,7 @@
 	border-color: var(--black);
 	border-right-width: 0;
 	border-radius: 25px 0 0 25px;
+	outline: none;
 }
 
 .search-form button {
@@ -41,4 +42,10 @@
 
 .search-form button:hover span {
 	color: #fff;
+}
+
+.search-form > .error-msg {
+	color: var(--red);
+	font-weight: bold;
+	margin-top: 0.25rem;
 }

@@ -14,6 +14,8 @@
 		<link rel="stylesheet" href="./styles/components/header.css" />
 		<link rel="stylesheet" href="./styles/components/type-tag.css" />
 		<link rel="stylesheet" href="./styles/pokemon.css" />
+		<!-- animations -->
+		<link rel="stylesheet" href="./styles/animations.css" />
 
 		<!-- Loading JS -->
 		<script src="./js/pokemonDetails.js" defer type="module"></script>
@@ -30,42 +32,46 @@
 		</header>
 
 		<main>
-			<div class="pokemon-details">
+			<div class="pokemon-details fade-up">
 				<div class="img-container"><img id="pokemon-img" /></div>
 				<div class="content">
 					<header>
 						<span id="pokemon-id">#000</span>
-						<span id="pokemon-name">Pokemon Name</span>
+						<span id="pokemon-name">Carregando...</span>
 					</header>
 
 					<div class="column-flex-container pokemon-desc">
 						<div class="stats-container">
 							<div class="stat">
 								<span class="stat-name">Altura</span>
-								<span class="stat-value" id="stat-height">0.0m</span>
+								<span class="stat-value" id="stat-height">----</span>
 							</div>
 							<div class="stat">
 								<span class="stat-name">Peso</span>
-								<span class="stat-value" id="stat-weight">00kg</span>
+								<span class="stat-value" id="stat-weight">----</span>
 							</div>
 							<div class="stat">
 								<span class="stat-name">Habitat</span>
-								<span class="stat-value" id="stat-habitat">Algum lugar</span>
+								<span class="stat-value" id="stat-habitat">------</span>
+							</div>
+							<div class="stat">
+								<span class="stat-name">EXP. Base</span>
+								<span class="stat-value" id="stat-base-exp">------</span>
 							</div>
 						</div>
 
-						<div class="column-flex-container tag-container">
+						<div class="column-flex-container info-container">
 							<span class="title">Tipos</span>
 
 							<div class="row-flex-container" id="types-container">
-								<span class="type-tag type-tag-fire">fire</span>
+								<!-- <span class="type-tag type-tag-fire">fire</span> -->
 							</div>
 						</div>
 
-						<div class="column-flex-container tag-container">
+						<div class="column-flex-container info-container">
 							<span class="title">Fraquezas</span>
 							<div class="row-flex-container" id="weakness-container">
-								<span class="type-tag type-tag-water">water</span>
+								<!-- <span class="type-tag type-tag-water">water</span> -->
 							</div>
 						</div>
 					</div>

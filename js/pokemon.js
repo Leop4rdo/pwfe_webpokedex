@@ -22,8 +22,6 @@ export const getPokemon = async (name) => {
  * @returns
  */
 export const getTypeTagsHTML = (type) => {
-	//const type = pokemon.type.name;
-
 	return `
         <span class="type-tag type-tag-${type}">${type}</span>
     `;
@@ -74,19 +72,27 @@ export const getType = async (name) => {
 	return data;
 };
 
-/* verifica se o pokemon existe*/
-export const pokemonExists = async (name) => {
-	const endpoint = `https://pokeapi.co/api/v2/pokemon/${name}`;
-
-	const res = await fetch(endpoint);
-
-	return res.status != "404";
-};
-
+/**
+ * retorna as fraquezas do pokemon
+ */
 export const getPokemonWeakness = (pokemon) => {
 	return pokemon.types.map(async (pokemonType, index) => {
 		const type = await getType(pokemonType.type.name);
 
 		return type.damage_relations.double_damage_from[index];
 	});
+};
+
+/**
+ * retorna o nome e a url de todos os pokemons
+ */
+export const getAllPokemon = async () => {
+	// pesquisando todos os pokemons
+	// o limite de 100000 foi usado para ter certeza de que todos os pokemons seriam listados
+	const endpoint = `https://pokeapi.co/api/v2/pokemon?limit=${100000}`;
+
+	const res = await fetch(endpoint);
+	const data = await res.json();
+
+	return data.results;
 };

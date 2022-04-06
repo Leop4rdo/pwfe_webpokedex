@@ -39,19 +39,23 @@ const getPageContent = async (page) => {
  * @returns card
  */
 const createCard = async (cardData) => {
+	// criando o card
 	const card = document.createElement("div");
 	card.classList.add("card");
 
+	// recebendo o pokemon
 	const pokemon = await getPokemon(cardData.name);
 
+	// recebendo as tags de tipos do pokemon
 	const typeTags = pokemon.types.map((pokemonType) => getTypeTagsHTML(pokemonType.type.name));
 
+	// criando conteudo do card e colocando ele dentro do elemento card
 	card.innerHTML = `
         <div class="card-detail"></div>
         <div class="card-content">
             <div>
                 <span id="pokemon-id">#${pokemon.id}</span>
-                <span id="pokemon-name"><a href="./pokemon.html?name=${pokemon.name}">${pokemon.name}</a></span>
+                <span id="pokemon-name">${pokemon.name}</a></span>
             </div>
 
             <div class="type-tag-container">
@@ -63,8 +67,20 @@ const createCard = async (cardData) => {
         </div>
     `;
 
-	return card;
+	// criando link que engloba o card
+	const cardLink = document.createElement("a");
+	cardLink.classList.add("card-link");
+	cardLink.href = `./pokemon.html?name=${pokemon.name}`;
+
+	// adicionando animação de fade-up ao card
+	card.classList.add("fade-up");
+
+	cardLink.appendChild(card);
+
+	return cardLink;
 };
+
+// <a href="./pokemon.html?name=${pokemon.name}"> </a>
 
 const cardContainer = document.querySelector("#pokemon-card-container");
 loadCards(cardContainer);

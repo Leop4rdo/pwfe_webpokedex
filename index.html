@@ -16,6 +16,8 @@
 		<link rel="stylesheet" href="./styles/components/card.css" />
 		<link rel="stylesheet" href="./styles/components/nav.css" />
 		<link rel="stylesheet" href="./styles/components/type-tag.css" />
+		<!-- animations -->
+		<link rel="stylesheet" href="./styles/animations.css" />
 
 		<!-- Loading JS -->
 		<script src="./js/pokemonList.js" type="module" defer></script>
@@ -35,16 +37,27 @@
 		</header>
 
 		<main>
-			<form class="search-form" id="search-form">
-				<input type="text" id="searchbar" placeholder="Pesquise um pokemon por nome" />
-				<button id="search-btn">
-					<span class="material-icons"> search </span>
-				</button>
+			<form class="search-form column-flex-container" id="search-form">
+				<div class="row-flex-container">
+					<input
+						type="text"
+						id="searchbar"
+						placeholder="Pesquise por nome ou numero da pokedex"
+						list="pokemon-datalist"
+						autocomplete="none"
+					/>
+					<datalist id="pokemon-datalist"> </datalist>
+					<button id="search-btn">
+						<span class="material-icons"> search </span>
+					</button>
+				</div>
+
+				<span class="error-msg" id="searchbar-error-msg"></span>
 			</form>
 
 			<div class="card-container" id="pokemon-card-container"></div>
 
-			<nav>
+			<nav class="fade-in">
 				<a id="prev-page-btn" class="disabled"><span class="material-icons">navigate_before</span></a>
 				<span id="page-index">1</span>
 				<a id="next-page-btn"><span class="material-icons">navigate_next</span></a>

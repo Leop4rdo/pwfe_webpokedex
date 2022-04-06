@@ -11,6 +11,10 @@
 	width: 100%;
 }
 
+.card-link {
+	text-decoration: none;
+}
+
 .card {
 	width: 400px;
 	height: 150px;
@@ -27,6 +31,8 @@
 	overflow: hidden;
 
 	box-shadow: 8px 10px 16px #0005;
+
+	opacity: 0;
 }
 
 .card .card-detail {
@@ -73,7 +79,7 @@
 	color: var(--gray);
 }
 
-.card .card-content #pokemon-name a {
+.card .card-content #pokemon-name {
 	font-size: 1.25rem;
 	text-decoration: none;
 }
