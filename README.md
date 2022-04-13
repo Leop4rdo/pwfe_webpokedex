@@ -8,13 +8,10 @@ Projeto realizado com fins didáticos durante o curso de desenvolvimento de sist
 O objetivo do projeto era fazer um site populado com cards criados apartir de requisiçoes a uma api
 usando javascript.
 
-
-
-
 ## Tecnologias usadas:
-- HTML
-- CSS
-- Javascript
+- <img align="center" alt="HTML-5" height="25" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"> HTML
+- <img align="center" alt="CSS3" height="25" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"> CSS
+- <img align="center" alt="JavaScript" height="25" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> JavaScript
 - Api: <a href="https://pokeapi.co/">PokeApi</a>
 
 
@@ -22,9 +19,8 @@ usando javascript.
 
 ## Autor
 
-👤 **Leonardo Antunes**
-
-* Github: [@Leop4rdo](https://github.com/Leop4rdo)
+- Leonardo Antunes
+- Github: [@Leop4rdo](https://github.com/Leop4rdo)
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
