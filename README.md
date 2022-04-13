@@ -9,12 +9,13 @@ O objetivo do projeto era fazer um site populado com cards criados apartir de re
 usando javascript.
 
 
-- Api usada: <a href="https://pokeapi.co/">PokeApi</a>
+
 
 ## Tecnologias usadas:
 - HTML
 - CSS
 - Javascript
+- Api: <a href="https://pokeapi.co/">PokeApi</a>
 
 
 ### 🏠 [Homepage](https://leop4rdo.github.io/pwfe_webpokedex/)
