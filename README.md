@@ -15,12 +15,9 @@ usando javascript com fetch e async-await.
 - Api: <a href="https://pokeapi.co/">PokeApi</a>
 
 
-### 🏠 [Homepage](https://leop4rdo.github.io/pwfe_webpokedex/)
+## [Acesse o site por aqui](https://leop4rdo.github.io/pwfe_webpokedex/)
 
 ## Autor
 
 Leonardo Antunes
 - Github: [@Leop4rdo](https://github.com/Leop4rdo)
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
