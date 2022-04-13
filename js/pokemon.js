@@ -1,5 +1,8 @@
 "use strict";
 
+/** essa variavel guarda o nome de todos os pokemons */
+let pokemons = [];
+
 /**
  * Faz uma requisição na api para pegar detalhes sobre o pokemon
  *
@@ -87,12 +90,17 @@ export const getPokemonWeakness = (pokemon) => {
  * retorna o nome e a url de todos os pokemons
  */
 export const getAllPokemon = async () => {
-	// pesquisando todos os pokemons
-	// o limite de 100000 foi usado para ter certeza de que todos os pokemons seriam listados
-	const endpoint = `https://pokeapi.co/api/v2/pokemon?limit=${100000}`;
+	// preenchendo o array de pokemons caso ele esteja vazio
+	if (!pokemons.length) {
+		// pesquisando todos os pokemons
+		// o limite de 100000 foi usado para ter certeza de que todos os pokemons seriam listados
+		const endpoint = `https://pokeapi.co/api/v2/pokemon?limit=${100000}`;
 
-	const res = await fetch(endpoint);
-	const data = await res.json();
+		const res = await fetch(endpoint);
+		const data = await res.json();
 
-	return data.results;
+		pokemons = data.results.map((pokemon) => pokemon.name);
+	}
+
+	return pokemons;
 };

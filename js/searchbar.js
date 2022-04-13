@@ -4,12 +4,10 @@ const searchBar = document.querySelector("#searchbar");
 const searchForm = document.querySelector("#search-form");
 const errorMsg = document.querySelector("#searchbar-error-msg");
 
-let pokemons = [];
-
 const loadDataList = async (e) => {
-	pokemons = await getAllPokemon();
+	const pokemons = await getAllPokemon();
 
-	const datalistOptions = pokemons.map((pokemon) => `<option value="${pokemon.name}"/ >`);
+	const datalistOptions = pokemons.map((pokemon) => `<option value="${pokemon}"/ >`);
 
 	console.log;
 
@@ -35,10 +33,10 @@ const onSubmit = async (e) => {
 };
 
 /** verifica se o pokemon existe */
-const pokemonExists = (name) => {
-	const pokemon = pokemons.filter((poke) => (poke.name = name));
+const pokemonExists = async (name) => {
+	const pokemons = await getAllPokemon();
 
-	return pokemon != null;
+	const pokemon = pokemons.filter((poke) => (poke.name = name));
 };
 
 window.addEventListener("load", loadDataList);
