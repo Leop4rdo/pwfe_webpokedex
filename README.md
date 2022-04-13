@@ -12,7 +12,7 @@ usando javascript com fetch e async-await.
 - <img align="center" alt="HTML-5" height="25" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"> HTML
 - <img align="center" alt="CSS3" height="25" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"> CSS
 - <img align="center" alt="JavaScript" height="25" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> JavaScript
-- Api: <a href="https://pokeapi.co/">PokeApi</a>
+- <a href="https://pokeapi.co/">PokeApi</a>
 
 ## Autor
 
