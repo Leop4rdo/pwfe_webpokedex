@@ -5,8 +5,8 @@ Projeto realizado com fins didáticos durante o curso de desenvolvimento de sist
 <a href="https://jandira.sp.senai.br/">SENAI Jandira</a>, com orientação do professor 
 <a href="https://github.com/fernandoleonid">Fernando Leonid</a> na materia de Programação Web Front End.
 
-O objetivo do projeto era fazer um site populado com cards criados apartir de requisiçoes a uma api
-usando javascript.
+O objetivo do projeto era fazer um site populado com cards criados apartir de requisições a uma api publica
+usando javascript com fetch e async-await.
 
 ## Tecnologias usadas:
 - <img align="center" alt="HTML-5" height="25" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"> HTML
