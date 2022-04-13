@@ -19,7 +19,7 @@ usando javascript com fetch e async-await.
 
 ## Autor
 
-- Leonardo Antunes
+Leonardo Antunes
 - Github: [@Leop4rdo](https://github.com/Leop4rdo)
 
 ***
